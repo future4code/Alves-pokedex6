@@ -4,11 +4,15 @@ import { GlobalContext } from './GlobalContext'
 
 export default function GlobalState(props) {
     const [adiciona, setAdiciona] = useState([])
+    const [listaPokemon, setListaPokemon] = useState([])
 
     const values = {
         adiciona,
-        setAdiciona
+        setAdiciona,
+        listaPokemon,
+        setListaPokemon
     }
+
 
     const Provider = GlobalContext.Provider
 
