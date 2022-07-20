@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import ImagemPokemon from "../../Components/ImagemPokemon";
 import TipoPokemon from "../../Components/TipoPokemon";
 import { useNavigate } from "react-router-dom";
@@ -9,11 +9,8 @@ function PokeDex() {
   const navigate = useNavigate();
   const { adiciona, setAdiciona } = useContext(GlobalContext);
 
-  const removerPokemon = (item) => {
-    const index = adiciona.findIndex((i) => i.name === item.name);
-    const novaLista = [...adiciona];
-    novaLista.splice(index, 1);
-    setAdiciona(novaLista);
+  const removerPokemon = (poke) => {
+    setAdiciona(adiciona.filter((item) => poke.name !== item.name));
   };
 
   const renderPokedex = adiciona.map((item, index) => {
@@ -22,7 +19,7 @@ function PokeDex() {
         <p>{item.name}</p>
         <ImagemPokemon url={item.url} />
         <TipoPokemon url={item.url} />
-        <button onClick={removerPokemon}>Deletar</button>
+        <button onClick={() => removerPokemon(item)}>Deletar</button>
       </div>
     );
   });
