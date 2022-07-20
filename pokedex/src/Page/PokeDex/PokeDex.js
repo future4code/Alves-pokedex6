@@ -22,7 +22,7 @@ function PokeDex() {
         <p>{item.name}</p>
         <ImagemPokemon url={item.url} />
         <TipoPokemon url={item.url} />
-        <button onClick={removerPokemon}>Excluir</button>
+        <button onClick={removerPokemon}>Deletar</button>
       </div>
     );
   });
