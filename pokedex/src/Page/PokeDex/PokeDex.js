@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import ImagemPokemon from "../../Components/ImagemPokemon";
 import TipoPokemon from "../../Components/TipoPokemon";
 import { useNavigate } from "react-router-dom";
