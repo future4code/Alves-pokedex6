@@ -15,7 +15,7 @@ export const Card = styled.div`
         switch (color) {
             case 'grass':
                 return css`
-                background-color: #70B873;
+                background-color: #729F92;
         `
             case 'fire':
                 return css`
@@ -43,11 +43,13 @@ export const Card = styled.div`
         `
         }
     }}
+    
 `
+
 export const TituloPagina = styled.h1`
     background-color: #5E5E5E;
     margin: 0;
-    padding: 10px;
+    padding: 10px 50px;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
@@ -85,12 +87,13 @@ export const NomeTipo = styled.p`
 `
 
 export const ConteudoTipo = styled.div`
-    display: inline;
+    display: flex;
     border: 1px solid;
     border-style: dotted;
     border-radius: 5px;
     padding: 10px;
     margin: 10px;
+    justify-content: center;
     ${({ color }) => {
         switch (color) {
             case 'grass':
@@ -126,6 +129,8 @@ export const ConteudoTipo = styled.div`
 `
 
 export const PegaPokemon = styled.button`
+    width: 146px;
+    height: 38px;
     padding: 4px 10px;
     margin: 10px;
     border-radius: 8px;
@@ -137,9 +142,46 @@ export const BlocoBotao = styled.div`
     border-radius: 0px 0px 12px 12px;
     display: flex;
     justify-content: space-around;
+    ${({ color }) => {
+        switch (color) {
+            case 'grass':
+                return css`
+                background-color: #729F92;
+        `
+            case 'fire':
+                return css`
+                background-color: #EAAB7D;
+        `
+            case 'water':
+                return css`
+                background-color: #71C3FF;
+        `
+            case 'bug':
+                return css`
+                background-color: #76A866;
+        `
+            case 'poison':
+                return css`
+                background-color: #AD61AE;
+        `
+            case 'flying':
+                return css`
+                background-color: #6892B0;
+        `
+            case 'normal':
+                return css`
+                background-color: #BF9762;
+        `
+        }
+    }}
 `
 
 export const Detalhe = styled.a`
     color: white;
     padding: 10px;
+    margin-top: 10px;
+`
+
+export const TipoImagem = styled.img`
+    margin-left: 5px;
 `

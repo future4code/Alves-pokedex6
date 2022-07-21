@@ -1,16 +1,12 @@
 import React, { useContext, useEffect } from "react";
-import ImagemPokemon from "../../Components/ImagemPokemon";
-import TipoPokemon from "../../Components/TipoPokemon";
-import { Card, Conainer, CardMain, Titulo, PegaPokemon, BlocoBotao, Detalhe, TituloPagina } from "./ListaCss";
-import { useNavigate } from "react-router-dom";
-import { pokeDex } from "../../Router/Coordinator";
+import { Card, Conainer, CardMain, Titulo, PegaPokemon, BlocoBotao, Detalhe, TituloPagina, NomeTipo, ConteudoTipo, Imagem, TipoImagem } from "./ListaCss";
 import { GlobalContext } from "../../Global/GlobalContext";
+import ImagemTipo from "../../Components/ImagemTipo";
 
 function ListaPokemon() {
-    const navigate = useNavigate();
-    const { adiciona, setAdiciona, listaPokemon, setListaPokemon, teste } = useContext(GlobalContext);
+    const { adiciona, setAdiciona, listaPokemon, setListaPokemon, getPokemons } = useContext(GlobalContext);
 
-    useEffect(() => { teste() }, [])
+    useEffect(() => { getPokemons() }, [])
 
     const adicionaPokemon = (nome, url) => {
         const item = {
@@ -29,19 +25,28 @@ function ListaPokemon() {
         <div>
             <TituloPagina>Todos Pokémons</TituloPagina>
             <Conainer>
-                {listaPokemon.map((item, index, cor) => {
+                {listaPokemon.map((item, index) => {
                     return (
                         <CardMain key={index}>
-                            <Card color={cor}>
+                            <Card color={item.types[0].type.name}>
                                 <div>
                                     <Titulo>{item.name}</Titulo>
-                                    <TipoPokemon url={item.url} />
+                                    <ConteudoTipo color={item.types[0].type.name}>
+                                        <div>
+                                            <TipoImagem src={ImagemTipo(item.types[0].type.name)} alt={item.types.map(item => item.type.name)} />
+                                            <NomeTipo>{item.types[0].type.name }</NomeTipo>
+                                        </div>
+                                        <div>
+                                            <TipoImagem src={ImagemTipo(item.types[1] && item.types[1].type.name)} />
+                                            <NomeTipo>{item.types[1] ? (`${item.types[1].type.name}`) : (``) }</NomeTipo>
+                                        </div>
+                                    </ConteudoTipo>
                                 </div>
-                                <ImagemPokemon url={item.url} />
+                                <Imagem src={item.sprites.other["official-artwork"].front_default} />
                             </Card>
-                            <BlocoBotao>
+                            <BlocoBotao color={item.types[0].type.name}>
                                 <Detalhe href="#" alt='uiii'>Detalhe</Detalhe>
-                                <PegaPokemon onClick={() => adicionaPokemon(item.name, item.url)}>Pega Pokemon</PegaPokemon>
+                                <PegaPokemon onClick={() => adicionaPokemon(item.name, item.url)}>Capturar!</PegaPokemon>
                             </BlocoBotao>
                         </CardMain>
                     );
