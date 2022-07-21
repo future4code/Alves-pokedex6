@@ -30,16 +30,13 @@ function ListaPokemon() {
                         <CardMain key={index}>
                             <Card color={item.types[0].type.name}>
                                 <div>
+                                    <h3>#{index + 1}</h3>
                                     <Titulo>{item.name}</Titulo>
                                     <ConteudoTipo color={item.types[0].type.name}>
-                                        <div>
-                                            <TipoImagem src={ImagemTipo(item.types[0].type.name)} alt={item.types.map(item => item.type.name)} />
-                                            <NomeTipo>{item.types[0].type.name }</NomeTipo>
-                                        </div>
-                                        <div>
-                                            <TipoImagem src={ImagemTipo(item.types[1] && item.types[1].type.name)} />
-                                            <NomeTipo>{item.types[1] ? (`${item.types[1].type.name}`) : (``) }</NomeTipo>
-                                        </div>
+                                        <TipoImagem src={ImagemTipo(item.types[0].type.name)} alt={item.types.map(item => item.type.name)} />
+                                        <NomeTipo>{item.types[0].type.name}</NomeTipo>
+                                        <TipoImagem src={ImagemTipo(item.types[1] && item.types[1].type.name)} />
+                                        <NomeTipo>{item.types[1] ? (`${item.types[1].type.name}`) : (``)}</NomeTipo>
                                     </ConteudoTipo>
                                 </div>
                                 <Imagem src={item.sprites.other["official-artwork"].front_default} />

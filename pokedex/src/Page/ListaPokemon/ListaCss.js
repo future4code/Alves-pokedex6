@@ -58,6 +58,8 @@ export const TituloPagina = styled.h1`
 `
 
 export const Titulo = styled.h2`
+    font-family: 'Inter';
+    margin-top: 0px;
     font-size: 32px;
     line-height: 39px;
     letter-spacing: 0em;
@@ -87,13 +89,13 @@ export const NomeTipo = styled.p`
 `
 
 export const ConteudoTipo = styled.div`
-    display: flex;
     border: 1px solid;
     border-style: dotted;
     border-radius: 5px;
     padding: 10px;
     margin: 10px;
     justify-content: center;
+    text-align: center;
     ${({ color }) => {
         switch (color) {
             case 'grass':
