@@ -16,7 +16,6 @@ function Header() {
       return (
         <BotaoHome onClick={() => listPokemon(navigate)}>
           {" "}
-          {/* <MdArrowBackIosNew /> */}
           Todos Pokémons
         </BotaoHome>
       );
@@ -25,7 +24,6 @@ function Header() {
         <div>
           <BotaoHome onClick={() => listPokemon(navigate)}>
             {" "}
-            {/* <MdArrowBackIosNew /> */}
             Todos Pokémons
           </BotaoHome>
           <BotaoPokedex onClick={() => pokeDex(navigate)}>
