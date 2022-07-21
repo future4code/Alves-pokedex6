@@ -1,6 +1,4 @@
 import React, { useContext, useEffect } from "react";
-import axios from "axios";
-import { BASE_URL } from "../../Components/BaseUrl";
 import ImagemPokemon from "../../Components/ImagemPokemon";
 import TipoPokemon from "../../Components/TipoPokemon";
 import { Card, Conainer } from "./ListaCss";
@@ -10,19 +8,9 @@ import { GlobalContext } from "../../Global/GlobalContext";
 
 function ListaPokemon() {
     const navigate = useNavigate();
-    const { adiciona, setAdiciona, listaPokemon, setListaPokemon } = useContext(GlobalContext);
+    const { adiciona, setAdiciona, listaPokemon, setListaPokemon, teste } = useContext(GlobalContext);
 
-    useEffect(() => {
-        const teste = () => {
-            axios.get(`${BASE_URL}pokemon/?offset=0&limit=20`)
-                .then((response) => {
-                    setListaPokemon(response.data.results)
-                }).catch((erro) => {
-                    console.log(erro.message)
-                })
-        }
-        teste()
-    }, [])
+    useEffect(() => { teste() }, [])
 
     const adicionaPokemon = (nome, url) => {
         const item = {
