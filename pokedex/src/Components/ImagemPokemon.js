@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import {Imagem} from '../Page/ListaPokemon/ListaCss'
 
 function ImagemPokemon(props) {
     const [recebeDados, setRecebeDados] = useState()
@@ -17,7 +18,7 @@ function ImagemPokemon(props) {
             })
     }
 
-    const render = recebeDados ? (<img src={recebeDados.front_default}/>) : (<p>Imagem não encontrada</p>)
+    const render = recebeDados ? (<Imagem src={recebeDados.other["official-artwork"].front_default}/>) : (<p>Imagem não encontrada</p>)
     return (
         <div>
             {render}

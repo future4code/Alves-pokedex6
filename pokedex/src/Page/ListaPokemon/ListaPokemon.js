@@ -1,14 +1,14 @@
 import React, { useContext, useEffect } from "react";
 import ImagemPokemon from "../../Components/ImagemPokemon";
 import TipoPokemon from "../../Components/TipoPokemon";
-import { Card, Conainer } from "./ListaCss";
+import { Card, Conainer, CardMain, Titulo, PegaPokemon, BlocoBotao, Detalhe } from "./ListaCss";
 import { useNavigate } from "react-router-dom";
 import { pokeDex } from "../../Router/Coordinator";
 import { GlobalContext } from "../../Global/GlobalContext";
 
 function ListaPokemon() {
     const navigate = useNavigate();
-    const { adiciona, setAdiciona, listaPokemon, setListaPokemon, teste } = useContext(GlobalContext);
+    const { adiciona, setAdiciona, listaPokemon, setListaPokemon, teste, tipoPokemon, setTipoPokemon } = useContext(GlobalContext);
 
     useEffect(() => { teste() }, [])
 
@@ -30,12 +30,19 @@ function ListaPokemon() {
             <button onClick={() => pokeDex(navigate)}>PokeDex</button>
             {listaPokemon.map((item, index) => {
                 return (
-                    <Card key={index}>
-                        <p>{item.name}</p>
-                        <ImagemPokemon url={item.url} />
-                        <TipoPokemon url={item.url} />
-                        <button onClick={() => adicionaPokemon(item.name, item.url)}>Pega Pokemon</button>
-                    </Card>
+                    <CardMain key={index}>
+                        <Card color={tipoPokemon}>
+                            <div>
+                                <Titulo>{item.name}</Titulo>
+                                <TipoPokemon url={item.url} />
+                            </div>
+                            <ImagemPokemon url={item.url} />
+                        </Card>
+                        <BlocoBotao>
+                            <Detalhe href="#" alt='uiii'>Detalhe</Detalhe>
+                            <PegaPokemon onClick={() => adicionaPokemon(item.name, item.url)}>Pega Pokemon</PegaPokemon>
+                        </BlocoBotao>
+                    </CardMain>
                 );
             })}
         </Conainer>
