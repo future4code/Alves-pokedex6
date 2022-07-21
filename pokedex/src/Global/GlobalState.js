@@ -7,7 +7,6 @@ import { BASE_URL } from "../Components/BaseUrl";
 export default function GlobalState(props) {
     const [adiciona, setAdiciona] = useState([])
     const [listaPokemon, setListaPokemon] = useState([])
-    const [tipoPokemon, setTipoPokemon] = useState()
 
 
     const teste = () => {
@@ -28,9 +27,7 @@ export default function GlobalState(props) {
         setAdiciona,
         listaPokemon,
         setListaPokemon,
-        teste,
-        tipoPokemon,
-        setTipoPokemon
+        teste
     }
 
     const Provider = GlobalContext.Provider

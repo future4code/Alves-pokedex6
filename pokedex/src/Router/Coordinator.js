@@ -1,6 +1,6 @@
 import React from "react";
 
-export const listaPokemon = (navigate) => {
+export const listPokemon = (navigate) => {
 
     navigate('/')
 
