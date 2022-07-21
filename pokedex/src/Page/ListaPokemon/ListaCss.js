@@ -44,6 +44,17 @@ export const Card = styled.div`
         }
     }}
 `
+export const TituloPagina = styled.h1`
+    background-color: #5E5E5E;
+    margin: 0;
+    padding: 10px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 72px;
+`
+
 export const Titulo = styled.h2`
     font-size: 32px;
     line-height: 39px;
@@ -52,7 +63,6 @@ export const Titulo = styled.h2`
 `
 
 export const CardMain = styled.div`
-    background-color: #5E5E5E;
     margin: 30px 10px;
     border-radius: 12px;
 `
