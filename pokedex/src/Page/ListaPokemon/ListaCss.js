@@ -58,6 +58,8 @@ export const TituloPagina = styled.h1`
 `
 
 export const Titulo = styled.h2`
+    margin-top: 5px;
+    font-family: 'Inter';
     font-size: 32px;
     line-height: 39px;
     letter-spacing: 0em;
