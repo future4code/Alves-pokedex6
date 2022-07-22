@@ -13,10 +13,11 @@ function ListaPokemon() {
     getPokemons();
   }, []);
 
-  const adicionaPokemon = (nome, url) => {
+  const adicionaPokemon = (nome, sprites, types) => {
     const item = {
       name: nome,
-      url: url,
+      sprites: sprites,
+      types: types,
     };
     const pegaItem = [...adiciona, item];
     setAdiciona(pegaItem);
@@ -53,8 +54,17 @@ function ListaPokemon() {
                 <Imagem src={item.sprites.other["official-artwork"].front_default} />
               </Card>
               <BlocoBotao color={item.types[0].type.name}>
-                <Detalhe onClick={() => detalhe(navigate, item.name)}>Detalhe</Detalhe>
-                <PegaPokemon onClick={() => adicionaPokemon(item.name, item.url)}>Capturar!</PegaPokemon>
+                <Detalhe onClick={() => detalhe(navigate, item.name)}>
+                  Detalhe
+                </Detalhe>
+                <PegaPokemon
+                  onClick={() =>
+                    adicionaPokemon(item.name, item.sprites, item.types)
+                  }
+                >
+                  Capturar!
+                </PegaPokemon>
+
               </BlocoBotao>
             </CardMain>
           );
