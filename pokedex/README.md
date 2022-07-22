@@ -1,6 +1,6 @@
 # Pokédex
 
-## Desenvolvedor
+## Desenvolvedores
 
 - Gabriel Inácio Wenchenck de Carvalho
 - Lucas Rafael Martins de Paula
