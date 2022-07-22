@@ -25,6 +25,4 @@
 - Botão de excluir os pokémons da pokédex
 - Botão para acessar os detalhes dos pokémons
 
-## O que não funciona
-
 ## Imagens:
