@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { pokeDex, listPokemon } from '../../Router/Coordinator';
+import { pokeDex, listPokemon } from "../../Router/Coordinator";
 import { Container, BotaoPokedex, BotaoHome, Imagem } from "./HeaderCss";
 import Logo from "../../IMG/logo_pokemon.png";
 import React from "react";
@@ -10,7 +10,7 @@ function Header() {
   const botaoHeader = () => {
     if (window.location.pathname === `/`) {
       return (
-        <BotaoPokedex onClick={() => pokeDex(navigate)}>Pokedéx</BotaoPokedex>
+        <BotaoPokedex onClick={() => pokeDex(navigate)}>Pokédex</BotaoPokedex>
       );
     } else if (window.location.pathname === `/pokedex`) {
       return (
