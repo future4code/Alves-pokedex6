@@ -26,10 +26,6 @@ function Header() {
             {" "}
             Todos Pokémons
           </BotaoHome>
-          <BotaoPokedex onClick={() => pokeDex(navigate)}>
-            {" "}
-            Pokédex
-          </BotaoPokedex>
         </div>
       );
     }

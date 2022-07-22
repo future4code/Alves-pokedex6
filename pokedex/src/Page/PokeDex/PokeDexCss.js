@@ -136,6 +136,7 @@ export const PegaPokemon = styled.button`
   margin: 10px;
   border-radius: 8px;
   border: 1px solid white;
+  cursor: pointer;
 `;
 
 export const BlocoBotao = styled.div`
@@ -181,6 +182,7 @@ export const Detalhe = styled.a`
   color: white;
   padding: 10px;
   margin-top: 10px;
+  cursor: pointer;
 `;
 
 export const TipoImagem = styled.img`
