@@ -4,6 +4,7 @@
 
 - Gabriel Inácio Wenchenck de Carvalho
 - Lucas Rafael Martins de Paula
+- Murilo Voigt Schlickmann
 
 ## Link
 
