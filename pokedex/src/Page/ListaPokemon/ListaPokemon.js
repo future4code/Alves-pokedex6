@@ -27,10 +27,11 @@ function ListaPokemon() {
     getPokemons();
   }, []);
 
-  const adicionaPokemon = (nome, url) => {
+  const adicionaPokemon = (nome, sprites, types) => {
     const item = {
       name: nome,
-      url: url,
+      sprites: sprites,
+      types: types,
     };
     const pegaItem = [...adiciona, item];
     setAdiciona(pegaItem);
@@ -81,7 +82,9 @@ function ListaPokemon() {
                   Detalhe
                 </Detalhe>
                 <PegaPokemon
-                  onClick={() => adicionaPokemon(item.name, item.url)}
+                  onClick={() =>
+                    adicionaPokemon(item.name, item.sprites, item.types)
+                  }
                 >
                   Capturar!
                 </PegaPokemon>
