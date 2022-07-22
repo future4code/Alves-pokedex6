@@ -8,6 +8,8 @@
 
 ## Link
 
+https://alves-pokedex6.surge.sh
+
 ## Descrição das funcionalidades do site:
 
 - A aplicação consiste em uma pokédex com 3 páginas e um header.
