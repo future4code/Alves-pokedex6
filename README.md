@@ -27,3 +27,9 @@
 - Botão para acessar os detalhes dos pokémons
 
 ## Imagens:
+
+![poke1](https://user-images.githubusercontent.com/104534121/180559872-41a07177-0f36-4752-b8cd-4201d243e993.jpg)
+![poke2](https://user-images.githubusercontent.com/104534121/180559884-fe2d6b7d-eb6a-424f-af15-717f35a2b471.jpg)
+![poke3](https://user-images.githubusercontent.com/104534121/180559892-c30e410b-0b20-497b-b27d-1749ebbda13c.jpg)
+![poke4](https://user-images.githubusercontent.com/104534121/180559896-75e5f649-f34d-478a-acf0-b55611866757.jpg)
+![poke5](https://user-images.githubusercontent.com/104534121/180559903-469974fb-d93e-4fd3-ab3a-34d025c5cd86.jpg)
