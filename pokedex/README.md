@@ -18,13 +18,13 @@ https://alves-pokedex6.surge.sh
 
 ## O que funciona
 
-- Página inicial renderizando 20 pokémons
-- Página da pokédex com os pokémons capturados
-- Página com os detalhes dos pokémons
-- Botão no header para ir até a pokédex
-- Botão no header para voltar para a lista de pokémons
-- Botão de capturar os pokémons para a pokédex
-- Botão de excluir os pokémons da pokédex
-- Botão para acessar os detalhes dos pokémons
+- Página inicial renderizando 20 pokémons.
+- Página da pokédex com os pokémons capturados.
+- Página com os detalhes dos pokémons.
+- Botão no header para ir até a pokédex.
+- Botão no header para voltar para a lista de pokémons.
+- Botão de capturar os pokémons para a pokédex.
+- Botão de excluir os pokémons da pokédex.
+- Botão para acessar os detalhes dos pokémons.
 
 ## Imagens:
