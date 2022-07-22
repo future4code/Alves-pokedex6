@@ -73,6 +73,8 @@ export const Conainer = styled.div`
   flex-wrap: wrap;
   background-color: #5e5e5e;
   justify-content: center;
+  width: 100%;
+  height: 100%;
 `;
 
 export const Imagem = styled.img`
